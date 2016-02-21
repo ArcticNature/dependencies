@@ -1,0 +1,23 @@
+{
+  "name": "dependencies.gflags",
+  "type": "scripts",
+
+  "clear-path": {
+    "options": { "force": true },
+    "src": "<%= path %>/build"
+  },
+  "include-path": ["<%= path %>/build/include"],
+  "static-libs":  ["<%= path %>/build/lib/libgflags.a"],
+
+  "scripts": {
+    "build": "<%= path %>/build.sh",
+    "noop": "echo 'Component does not support the operation'"
+  },
+
+  "analysis": "noop",
+  "targets": {
+    "debug":   { "tasks": ["build"] },
+    "release": { "tasks": ["build"] },
+    "test":    { "tasks": ["build"] }
+  }
+}
