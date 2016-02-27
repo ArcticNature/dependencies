@@ -2,6 +2,8 @@
   "name": "dependencies.gflags",
   "type": "scripts",
 
+  "dynamic-libs": ["pthread"],
+
   "clear-path": {
     "options": { "force": true },
     "src": "<%= path %>/build"
