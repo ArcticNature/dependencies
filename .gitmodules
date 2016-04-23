@@ -1,3 +1,6 @@
 [submodule "gflags/source"]
 	path = gflags/source
 	url = https://github.com/gflags/gflags.git
+[submodule "readline/source"]
+	path = readline/source
+	url = http://git.savannah.gnu.org/r/readline.git

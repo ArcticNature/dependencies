@@ -1,3 +1,6 @@
 *.swp
 
 gflags/build/
+lua/build/
+ncurses/build/
+readline/build/
