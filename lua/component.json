@@ -8,6 +8,7 @@
     "src": "<%= path %>/build"
   },
   "include-path": ["<%= path %>/build/out/include"],
+  "dynamic-libs": ["dl"],
   "static-libs":  ["<%= path %>/build/out/lib/liblua.a"],
 
   "scripts": {

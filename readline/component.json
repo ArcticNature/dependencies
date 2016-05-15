@@ -9,7 +9,6 @@
   },
   "include-path": ["<%= path %>/build/include"],
   "static-libs":  [
-    "<%= path %>/build/lib/libhistory.a",
     "<%= path %>/build/lib/libreadline.a"
   ],
 

@@ -38,3 +38,8 @@ Components
   * `dependencies.lua`: Lua library.
   * `dependencies.ncurses`: Needed by readline.
   * `dependencies.readline`: Advanced user input.
+
+
+### Reference links
+
+  * [Readline docs](http://www.delorie.com/gnu/docs/readline/).
