@@ -1,6 +1,7 @@
 *.swp
 
 gflags/build/
+libgit2/build/
 lua/build/
 ncurses/build/
 readline/build/

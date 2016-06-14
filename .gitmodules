@@ -4,3 +4,6 @@
 [submodule "readline/source"]
 	path = readline/source
 	url = http://git.savannah.gnu.org/r/readline.git
+[submodule "libgit2/source"]
+	path = libgit2/source
+	url = https://github.com/libgit2/libgit2.git

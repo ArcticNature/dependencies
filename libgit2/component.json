@@ -1,0 +1,31 @@
+{
+  "name": "dependencies.libgit2",
+  "type": "scripts",
+
+  "clear-path": ["dependencies/libgit2/build"],
+  "include-path": ["dependencies/libgit2/source/include"],
+
+  "dynamic-libs": [
+    "crypto",
+    "ssh2",
+    "ssl",
+
+    "curl",
+    "http_parser",
+    "pthread",
+    "rt",
+    "z"
+  ],
+  "static-libs": ["dependencies/libgit2/build/libgit2.a"],
+
+  "scripts": {
+    "libgit2": "dependencies/libgit2/libgit2.sh"
+  },
+
+  "analysis": ["libgit2"],
+  "targets": {
+    "debug": { "tasks" :["libgit2"] },
+    "release": { "tasks": ["libgit2"] },
+    "test": { "tasks": ["libgit2"] }
+  }
+}
