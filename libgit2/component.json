@@ -2,8 +2,11 @@
   "name": "dependencies.libgit2",
   "type": "scripts",
 
-  "clear-path": ["dependencies/libgit2/build"],
-  "include-path": ["dependencies/libgit2/source/include"],
+  "clear-path": {
+    "options": { "force": true },
+    "src": "<%= path %>/build" 
+  },
+  "include-path": ["<%= path %>/source/include"],
 
   "dynamic-libs": [
     "crypto",
@@ -16,10 +19,10 @@
     "rt",
     "z"
   ],
-  "static-libs": ["dependencies/libgit2/build/libgit2.a"],
+  "static-libs": ["<%= path %>/build/libgit2.a"],
 
   "scripts": {
-    "libgit2": "dependencies/libgit2/libgit2.sh"
+    "libgit2": "<%= path %>/libgit2.sh"
   },
 
   "analysis": ["libgit2"],
