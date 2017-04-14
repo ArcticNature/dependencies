@@ -4,4 +4,5 @@ gflags/build/
 libgit2/build/
 lua/build/
 ncurses/build/
+poolqueue/build/
 readline/build/

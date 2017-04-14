@@ -7,3 +7,6 @@
 [submodule "libgit2/source"]
 	path = libgit2/source
 	url = https://github.com/libgit2/libgit2.git
+[submodule "poolqueue/source"]
+	path = poolqueue/source
+	url = https://github.com/rhashimoto/poolqueue.git
