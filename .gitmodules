@@ -10,3 +10,6 @@
 [submodule "poolqueue/source"]
 	path = poolqueue/source
 	url = https://github.com/rhashimoto/poolqueue.git
+[submodule "json/source"]
+	path = json/source
+	url = https://github.com/nlohmann/json.git

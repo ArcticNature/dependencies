@@ -35,13 +35,17 @@ Components
 ----------
 
   * `dependencies.gflags`: Google command line parser.
+  * `dependencies.json`: A C++11 JSON library.
   * `dependencies.libgit2`: Portable, pure C implementation of the Git core methods.
   * `dependencies.lua`: Lua library.
   * `dependencies.ncurses`: Needed by readline.
+  * `dependencies.poolqueue`: A C++11 Promise A+ library.
   * `dependencies.readline`: Advanced user input.
 
 
 ### Reference links
 
+  * [JSON for Modern C++](https://github.com/nlohmann/json/tree/v2.1.1).
   * [LibGit2](https://libgit2.github.com/libgit2/#v0.24.1).
+  * [PoolQueue Promises](https://github.com/rhashimoto/poolqueue/tree/0.2.1).
   * [Readline docs](http://www.delorie.com/gnu/docs/readline/).
