@@ -17,7 +17,13 @@ if [ ! -f "${BUILD_PATH}/no-clean" ]; then
   git clean --force
   ./configure --prefix "${BUILD_PATH}"
 fi
-
 touch "${BUILD_PATH}/no-clean"
+
+# Skip if lib is already built.
+if [ -f "${BUILD_PATH}/lib/libreadline.a" ]; then
+  echo "Skipping already built dependency."
+  exit 0
+fi
+
 make
 make install > install.log

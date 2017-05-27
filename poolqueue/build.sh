@@ -18,7 +18,14 @@ if [ ! -f "${BUILD_PATH}/no-clean" ]; then
   ./bootstrap.sh
   ./configure --prefix "${BUILD_PATH}"
 fi
-
 touch "${BUILD_PATH}/no-clean"
+
+# Optimise away the next steps if the library exists.
+if [ -f "${BUILD_PATH}/lib/libpoolqueue.a" ]; then
+  echo "Skipping poolqueue re-build, library found."
+  exit 0
+fi
+
 make
 make install > install.log
+libtool --finish "${BUILD_PATH}/lib"

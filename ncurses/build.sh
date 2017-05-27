@@ -1,7 +1,5 @@
 #!/bin/bash
 # Compile static version of readline.
-
-
 COMPONENT_PATH="${PWD}/${1}"
 BUILD_PATH="${COMPONENT_PATH}/build"
 SOURCE_URL="http://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz"
@@ -19,6 +17,12 @@ fi
 if [ ! -f configure ]; then
   echo "Unpacking ncurses code ..."
   tar --extract --strip 1 --file ncurses.tar.gz || exit $?
+fi
+
+# Skip if built.
+if [ -f "${BUILD_PATH}/out/lib/libncurses.a" ]; then
+  echo "Skipping already built dependency."
+  exit 0
 fi
 
 # Configure and compile.

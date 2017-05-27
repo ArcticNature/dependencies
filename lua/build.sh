@@ -1,7 +1,5 @@
 #!/bin/bash
 # Fetch and compile lua library.
-
-
 COMPONENT_PATH="${PWD}/dependencies/lua"
 BUILD_PATH="${COMPONENT_PATH}/build"
 SOURCE_URL="http://www.lua.org/ftp/lua-5.3.2.tar.gz"
@@ -39,6 +37,13 @@ if [ ! -f Makefile ]; then
   echo "Unpacking LUA code ..."
   tar --extract --strip 1 --file lua.tar.gz || exit $?
 fi
+
+# Skip compiling if the library exists.
+if [ -f "${BUILD_PATH}/out/lib/liblua.a" ]; then
+  echo "Skipping already build deplendency."
+  exit 0
+fi
+
 
 # Compile static libraries.
 echo "Compiling LUA static library ..."
